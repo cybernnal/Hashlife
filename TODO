@@ -1,0 +1,20 @@
+TODO:
+
+hashlife -_- :
+
+- pars rle (adapt existing code in last version)
+- build qtree with the map
+
+- implement perfect hash table with linear complexity
+
+- learn how to hash a struct in order (nw, ne, sw, se) and build struct can be compared
+
+- recurs on qtree:
+    if pattern size = 2 * 2 apply life game rules, hash and stock pattern and return
+    else if pattern n * n exist yet return n - 1 * n - 1 pattern at next generation
+    else recurs on every quadrant of node to an existing pattern or 2 * 2 pattern
+
+    if pattern does't exist hash and stock it
+    return it
+
+- print it
