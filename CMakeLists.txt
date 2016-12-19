@@ -72,7 +72,7 @@ set(SOURCE_FILES
     libft/get_next_line.c
     libft/get_next_line.h
     libft/libft.h
-    src/error.c src/main.c)
+    src/error.c src/main.c src/convert_rle.c src/print_map.c src/fill_qtree.c)
 
 add_executable(hlife ${SOURCE_FILES})
 

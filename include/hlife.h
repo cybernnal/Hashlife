@@ -16,8 +16,7 @@
 # include "../libft/libft.h"
 #include <errno.h>
 #include <stdbool.h>
-
-#include "SDL.h"
+#include <SDL_types.h>
 
 /*#define WIN_X   1375
 #define WIN_Y   1375
@@ -58,24 +57,35 @@ typedef struct      		s_tab
 
 typedef int 				t_hlife;
 
+
 typedef struct 				s_qtree
 {
-	struct s_qtree			nw;
-	struct s_qtree			ne;
-	struct s_qtree			sw;
-	struct s_qtree			se;
-	struct s_qtree			next;
-	Uint16					leaf;
-	t_hlife 				level;
-}							t_qtree;
+    struct s_qtree          *nw;
+    struct s_qtree          *ne;
+    struct s_qtree          *sw;
+    struct s_qtree          *se;
+    struct s_qtree          *next;
+    Uint16                  leaf;
+    t_hlife                 level;
+}                           t_qtree;
+
+typedef struct              s_pars
+{
+    char                    **map;
+}                           t_pars;
 
 typedef struct				s_env
 {
 	t_hlife 				x_max;
-	t_hlife 				y_max;
-	struct t_qtree			*qtree;
+    t_hlife 				y_max;
+    char                    b[9];
+    char                    s[9];
+	t_qtree			*qtree;
 }							t_env;
 
+void                        pars_map(char *argv, t_env *env, t_pars *pars);
 int							ft_error(char *str);
+void 					    print_map(t_env *env, t_pars *pars);
+void 		    			fill_qtree(t_env *env, t_pars *pars);
 
 #endif
