@@ -265,6 +265,16 @@ CMakeFiles/hlife.dir/src/print_map.c.o: /usr/local/include/SDL2/SDL_types.h
 CMakeFiles/hlife.dir/src/print_map.c.o: /usr/local/include/SDL2/begin_code.h
 CMakeFiles/hlife.dir/src/print_map.c.o: /usr/local/include/SDL2/close_code.h
 
+CMakeFiles/hlife.dir/src/print_qtree.c.o: ../include/hlife.h
+CMakeFiles/hlife.dir/src/print_qtree.c.o: ../libft/libft.h
+CMakeFiles/hlife.dir/src/print_qtree.c.o: ../src/print_qtree.c
+CMakeFiles/hlife.dir/src/print_qtree.c.o: /usr/local/include/SDL2/SDL_config.h
+CMakeFiles/hlife.dir/src/print_qtree.c.o: /usr/local/include/SDL2/SDL_platform.h
+CMakeFiles/hlife.dir/src/print_qtree.c.o: /usr/local/include/SDL2/SDL_stdinc.h
+CMakeFiles/hlife.dir/src/print_qtree.c.o: /usr/local/include/SDL2/SDL_types.h
+CMakeFiles/hlife.dir/src/print_qtree.c.o: /usr/local/include/SDL2/begin_code.h
+CMakeFiles/hlife.dir/src/print_qtree.c.o: /usr/local/include/SDL2/close_code.h
+
 CMakeFiles/hlife.dir/src/qtree_level_up.c.o: ../include/hlife.h
 CMakeFiles/hlife.dir/src/qtree_level_up.c.o: ../libft/libft.h
 CMakeFiles/hlife.dir/src/qtree_level_up.c.o: ../src/qtree_level_up.c

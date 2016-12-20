@@ -1986,6 +1986,33 @@ src/free_qtree.c.s:
 	$(MAKE) -f CMakeFiles/hlife.dir/build.make CMakeFiles/hlife.dir/src/free_qtree.c.s
 .PHONY : src/free_qtree.c.s
 
+src/hash_table.o: src/hash_table.c.o
+
+.PHONY : src/hash_table.o
+
+# target to build an object file
+src/hash_table.c.o:
+	$(MAKE) -f CMakeFiles/hlife.dir/build.make CMakeFiles/hlife.dir/src/hash_table.c.o
+.PHONY : src/hash_table.c.o
+
+src/hash_table.i: src/hash_table.c.i
+
+.PHONY : src/hash_table.i
+
+# target to preprocess a source file
+src/hash_table.c.i:
+	$(MAKE) -f CMakeFiles/hlife.dir/build.make CMakeFiles/hlife.dir/src/hash_table.c.i
+.PHONY : src/hash_table.c.i
+
+src/hash_table.s: src/hash_table.c.s
+
+.PHONY : src/hash_table.s
+
+# target to generate assembly for a file
+src/hash_table.c.s:
+	$(MAKE) -f CMakeFiles/hlife.dir/build.make CMakeFiles/hlife.dir/src/hash_table.c.s
+.PHONY : src/hash_table.c.s
+
 src/hashlife_recurisve.o: src/hashlife_recurisve.c.o
 
 .PHONY : src/hashlife_recurisve.o
@@ -2066,6 +2093,33 @@ src/print_map.s: src/print_map.c.s
 src/print_map.c.s:
 	$(MAKE) -f CMakeFiles/hlife.dir/build.make CMakeFiles/hlife.dir/src/print_map.c.s
 .PHONY : src/print_map.c.s
+
+src/print_qtree.o: src/print_qtree.c.o
+
+.PHONY : src/print_qtree.o
+
+# target to build an object file
+src/print_qtree.c.o:
+	$(MAKE) -f CMakeFiles/hlife.dir/build.make CMakeFiles/hlife.dir/src/print_qtree.c.o
+.PHONY : src/print_qtree.c.o
+
+src/print_qtree.i: src/print_qtree.c.i
+
+.PHONY : src/print_qtree.i
+
+# target to preprocess a source file
+src/print_qtree.c.i:
+	$(MAKE) -f CMakeFiles/hlife.dir/build.make CMakeFiles/hlife.dir/src/print_qtree.c.i
+.PHONY : src/print_qtree.c.i
+
+src/print_qtree.s: src/print_qtree.c.s
+
+.PHONY : src/print_qtree.s
+
+# target to generate assembly for a file
+src/print_qtree.c.s:
+	$(MAKE) -f CMakeFiles/hlife.dir/build.make CMakeFiles/hlife.dir/src/print_qtree.c.s
+.PHONY : src/print_qtree.c.s
 
 src/qtree_level_up.o: src/qtree_level_up.c.o
 
@@ -2310,6 +2364,9 @@ help:
 	@echo "... src/free_qtree.o"
 	@echo "... src/free_qtree.i"
 	@echo "... src/free_qtree.s"
+	@echo "... src/hash_table.o"
+	@echo "... src/hash_table.i"
+	@echo "... src/hash_table.s"
 	@echo "... src/hashlife_recurisve.o"
 	@echo "... src/hashlife_recurisve.i"
 	@echo "... src/hashlife_recurisve.s"
@@ -2319,6 +2376,9 @@ help:
 	@echo "... src/print_map.o"
 	@echo "... src/print_map.i"
 	@echo "... src/print_map.s"
+	@echo "... src/print_qtree.o"
+	@echo "... src/print_qtree.i"
+	@echo "... src/print_qtree.s"
 	@echo "... src/qtree_level_up.o"
 	@echo "... src/qtree_level_up.i"
 	@echo "... src/qtree_level_up.s"

@@ -72,6 +72,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/hlife.dir/src/qtree_level_up.c.o"
   "CMakeFiles/hlife.dir/src/aplly_rules.c.o"
   "CMakeFiles/hlife.dir/src/hashlife_recurisve.c.o"
+  "CMakeFiles/hlife.dir/src/print_qtree.c.o"
+  "CMakeFiles/hlife.dir/src/hash_table.c.o"
   "hlife.pdb"
   "hlife"
 )

@@ -35,8 +35,11 @@ int		main(int argc, char  **argv)
     fill_qtree(env, &pars);//TODO free map
   //  env->qtree = qtree_lvl_up(env->qtree);
    // print_map(env, &pars);
+    print_qtree(env->qtree);
+    ft_putendl("\n");
     qtree2 = get_next_gen(env->qtree, env);
+    print_qtree(qtree2);
     free_qtree(env->qtree);
-    free_qtree(qtree2);
+  //  free_qtree(qtree2);
 	return (0);
 }

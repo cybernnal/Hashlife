@@ -2,20 +2,24 @@ TODO:
 
 hashlife -_- :
 
-- pars rle (adapt existing code in last version)
-- build qtree with the map
+√ = seems good
+
+√ - pars rle (adapt existing code in last version)
+√ - build qtree with the map
 
 - implement perfect hash table with linear complexity
 
 - learn how to hash a struct in order (nw, ne, sw, se) and build struct can be compared
 
-- recurs on qtree:
+- add number of population in each node ???
+
+√ - recurs on qtree:
     if pattern size = 2 * 2 apply life game rules, hash and stock pattern and return
     else if pattern n * n exist yet return n - 1 * n - 1 pattern at next generation
     else recurs on every quadrant of node and 5 tmp quadran (top : (nw.ne, ne.nw, nw.se, ne.sw) ; right : (ne.sw, ne.se, se.nw, se.ne) ; bot : (sw.ne, se.nw, sw.se, se.sw) ; left : (nw.sw, nw.se, sw.nw, sw.ne) ; midle : (nw.se, ne.sw, sw.ne, se.nw))
     on final return result of recurs on the for quadrant created by the 9 recursion // << compute 2^n-2 generation forward
     // total: 13 recursion
-- print it
+- print it // how ??? >>  is it okay?
 
 - hash
     take 4 pointer and complete node
@@ -28,4 +32,5 @@ hashlife -_- :
 incompris:
 
     hash the pointer
-    see at end, why calculate n - 2 generation forward and how to do it << start to understand
+    when expand univers
+√   see at end, why calculate n - 2 generation forward and how to do it << start to understand

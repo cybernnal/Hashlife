@@ -1809,6 +1809,54 @@ CMakeFiles/hlife.dir/src/hashlife_recurisve.c.o.provides: CMakeFiles/hlife.dir/s
 CMakeFiles/hlife.dir/src/hashlife_recurisve.c.o.provides.build: CMakeFiles/hlife.dir/src/hashlife_recurisve.c.o
 
 
+CMakeFiles/hlife.dir/src/print_qtree.c.o: CMakeFiles/hlife.dir/flags.make
+CMakeFiles/hlife.dir/src/print_qtree.c.o: ../src/print_qtree.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tombillard/work/hashlife/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/hlife.dir/src/print_qtree.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/hlife.dir/src/print_qtree.c.o   -c /Users/tombillard/work/hashlife/src/print_qtree.c
+
+CMakeFiles/hlife.dir/src/print_qtree.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/hlife.dir/src/print_qtree.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/tombillard/work/hashlife/src/print_qtree.c > CMakeFiles/hlife.dir/src/print_qtree.c.i
+
+CMakeFiles/hlife.dir/src/print_qtree.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/hlife.dir/src/print_qtree.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/tombillard/work/hashlife/src/print_qtree.c -o CMakeFiles/hlife.dir/src/print_qtree.c.s
+
+CMakeFiles/hlife.dir/src/print_qtree.c.o.requires:
+
+.PHONY : CMakeFiles/hlife.dir/src/print_qtree.c.o.requires
+
+CMakeFiles/hlife.dir/src/print_qtree.c.o.provides: CMakeFiles/hlife.dir/src/print_qtree.c.o.requires
+	$(MAKE) -f CMakeFiles/hlife.dir/build.make CMakeFiles/hlife.dir/src/print_qtree.c.o.provides.build
+.PHONY : CMakeFiles/hlife.dir/src/print_qtree.c.o.provides
+
+CMakeFiles/hlife.dir/src/print_qtree.c.o.provides.build: CMakeFiles/hlife.dir/src/print_qtree.c.o
+
+
+CMakeFiles/hlife.dir/src/hash_table.c.o: CMakeFiles/hlife.dir/flags.make
+CMakeFiles/hlife.dir/src/hash_table.c.o: ../src/hash_table.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tombillard/work/hashlife/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/hlife.dir/src/hash_table.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/hlife.dir/src/hash_table.c.o   -c /Users/tombillard/work/hashlife/src/hash_table.c
+
+CMakeFiles/hlife.dir/src/hash_table.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/hlife.dir/src/hash_table.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/tombillard/work/hashlife/src/hash_table.c > CMakeFiles/hlife.dir/src/hash_table.c.i
+
+CMakeFiles/hlife.dir/src/hash_table.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/hlife.dir/src/hash_table.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/tombillard/work/hashlife/src/hash_table.c -o CMakeFiles/hlife.dir/src/hash_table.c.s
+
+CMakeFiles/hlife.dir/src/hash_table.c.o.requires:
+
+.PHONY : CMakeFiles/hlife.dir/src/hash_table.c.o.requires
+
+CMakeFiles/hlife.dir/src/hash_table.c.o.provides: CMakeFiles/hlife.dir/src/hash_table.c.o.requires
+	$(MAKE) -f CMakeFiles/hlife.dir/build.make CMakeFiles/hlife.dir/src/hash_table.c.o.provides.build
+.PHONY : CMakeFiles/hlife.dir/src/hash_table.c.o.provides
+
+CMakeFiles/hlife.dir/src/hash_table.c.o.provides.build: CMakeFiles/hlife.dir/src/hash_table.c.o
+
+
 # Object files for target hlife
 hlife_OBJECTS = \
 "CMakeFiles/hlife.dir/libft/ft_atoi.c.o" \
@@ -1883,7 +1931,9 @@ hlife_OBJECTS = \
 "CMakeFiles/hlife.dir/src/free_qtree.c.o" \
 "CMakeFiles/hlife.dir/src/qtree_level_up.c.o" \
 "CMakeFiles/hlife.dir/src/aplly_rules.c.o" \
-"CMakeFiles/hlife.dir/src/hashlife_recurisve.c.o"
+"CMakeFiles/hlife.dir/src/hashlife_recurisve.c.o" \
+"CMakeFiles/hlife.dir/src/print_qtree.c.o" \
+"CMakeFiles/hlife.dir/src/hash_table.c.o"
 
 # External object files for target hlife
 hlife_EXTERNAL_OBJECTS =
@@ -1961,11 +2011,13 @@ hlife: CMakeFiles/hlife.dir/src/free_qtree.c.o
 hlife: CMakeFiles/hlife.dir/src/qtree_level_up.c.o
 hlife: CMakeFiles/hlife.dir/src/aplly_rules.c.o
 hlife: CMakeFiles/hlife.dir/src/hashlife_recurisve.c.o
+hlife: CMakeFiles/hlife.dir/src/print_qtree.c.o
+hlife: CMakeFiles/hlife.dir/src/hash_table.c.o
 hlife: CMakeFiles/hlife.dir/build.make
 hlife: /usr/local/lib/libSDL2main.a
 hlife: /usr/local/lib/libSDL2.dylib
 hlife: CMakeFiles/hlife.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/tombillard/work/hashlife/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Linking C executable hlife"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/tombillard/work/hashlife/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Linking C executable hlife"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hlife.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -2046,6 +2098,8 @@ CMakeFiles/hlife.dir/requires: CMakeFiles/hlife.dir/src/free_qtree.c.o.requires
 CMakeFiles/hlife.dir/requires: CMakeFiles/hlife.dir/src/qtree_level_up.c.o.requires
 CMakeFiles/hlife.dir/requires: CMakeFiles/hlife.dir/src/aplly_rules.c.o.requires
 CMakeFiles/hlife.dir/requires: CMakeFiles/hlife.dir/src/hashlife_recurisve.c.o.requires
+CMakeFiles/hlife.dir/requires: CMakeFiles/hlife.dir/src/print_qtree.c.o.requires
+CMakeFiles/hlife.dir/requires: CMakeFiles/hlife.dir/src/hash_table.c.o.requires
 
 .PHONY : CMakeFiles/hlife.dir/requires
 

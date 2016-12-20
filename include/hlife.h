@@ -87,8 +87,14 @@ typedef struct				s_env
 	t_qtree			        *qtree;//TODO keep here??
 }							t_env;
 
+typedef struct              s_table
+{
+    void                    *hash;
+    t_qtree                 *pointer;
+    struct s_table          *next;
+}                           t_table;
 
-
+void        				print_qtree(t_qtree *qtree);
 t_qtree                     *get_next_gen(t_qtree *qtree, t_env *env);
 t_qtree                     *apply_rules(t_qtree *node, t_env *env); // aplly rule on leaf
 t_qtree                     *qtree_lvl_up(t_qtree *qtree);//add a lvl to the qtree
