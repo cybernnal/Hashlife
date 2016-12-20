@@ -55,8 +55,8 @@ typedef struct      		s_tab
 }                   		t_tab;
 */
 
-typedef int 				t_hlife;
-
+typedef float 				t_hlife;
+typedef bool               t_leaf;
 
 typedef struct 				s_qtree
 {
@@ -65,12 +65,16 @@ typedef struct 				s_qtree
     struct s_qtree          *sw;
     struct s_qtree          *se;
     struct s_qtree          *next;
-    Uint16                  leaf;
+    t_leaf                  leaf;
     t_hlife                 level;
 }                           t_qtree;
 
 typedef struct              s_pars
 {
+    t_hlife 				x_max;
+    t_hlife 				y_max;
+    t_hlife 				x_zero;
+    t_hlife 				y_zero;
     char                    **map;
 }                           t_pars;
 
@@ -78,14 +82,20 @@ typedef struct				s_env
 {
 	t_hlife 				x_max;
     t_hlife 				y_max;
-    char                    b[9];
-    char                    s[9];
-	t_qtree			*qtree;
+    char                    b[10];
+    char                    s[10];
+	t_qtree			        *qtree;//TODO keep here??
 }							t_env;
 
-void                        pars_map(char *argv, t_env *env, t_pars *pars);
+
+
+t_qtree                     *get_next_gen(t_qtree *qtree, t_env *env);
+t_qtree                     *apply_rules(t_qtree *node, t_env *env); // aplly rule on leaf
+t_qtree                     *qtree_lvl_up(t_qtree *qtree);//add a lvl to the qtree
+void                        free_qtree(t_qtree *qtree);
+void                        pars_map(char *argv, t_env *env, t_pars *pars);//pars .rle file to 2d array
 int							ft_error(char *str);
-void 					    print_map(t_env *env, t_pars *pars);
-void 		    			fill_qtree(t_env *env, t_pars *pars);
+void 					    print_map(t_env *env, t_pars *pars);// print 2d array
+void 		    			fill_qtree(t_env *env, t_pars *pars);// fill new qtree with map just parsed
 
 #endif

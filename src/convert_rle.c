@@ -72,6 +72,8 @@ void pars_map(char *argv, t_env *env, t_pars *pars)
         ft_error("map error");
     if (env->x_max <= 0 || env->y_max <= 0)
         ft_error("x/y error");
+    pars->x_max = env->x_max;
+    pars->y_max = env->y_max;
     pars->map = (char**)ft_memalloc(sizeof(char*) * env->y_max);
     pars->map[y] = (char*)ft_memalloc(sizeof(char) * env->x_max);
     ft_bzero(pars->map[y], (size_t)env->x_max);

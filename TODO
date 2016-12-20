@@ -12,9 +12,20 @@ hashlife -_- :
 - recurs on qtree:
     if pattern size = 2 * 2 apply life game rules, hash and stock pattern and return
     else if pattern n * n exist yet return n - 1 * n - 1 pattern at next generation
-    else recurs on every quadrant of node to an existing pattern or 2 * 2 pattern
-
-    if pattern does't exist hash and stock it
-    return it
-
+    else recurs on every quadrant of node and 5 tmp quadran (top : (nw.ne, ne.nw, nw.se, ne.sw) ; right : (ne.sw, ne.se, se.nw, se.ne) ; bot : (sw.ne, se.nw, sw.se, se.sw) ; left : (nw.sw, nw.se, sw.nw, sw.ne) ; midle : (nw.se, ne.sw, sw.ne, se.nw))
+    on final return result of recurs on the for quadrant created by the 9 recursion // << compute 2^n-2 generation forward
+    // total: 13 recursion
 - print it
+
+- hash
+    take 4 pointer and complete node
+        hash pointer//how???
+        check if exist?
+            return pointer corresponding
+        else
+            store hash as key, node pointer as value in hash table; return pointer
+
+incompris:
+
+    hash the pointer
+    see at end, why calculate n - 2 generation forward and how to do it << start to understand

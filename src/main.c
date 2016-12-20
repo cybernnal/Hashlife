@@ -23,7 +23,7 @@ int		main(int argc, char  **argv)
 {
 	t_env	*env;
     t_pars  pars;
-
+    t_qtree *qtree2;
     int  i = 2;
 
 	if (argc < 1)
@@ -32,7 +32,11 @@ int		main(int argc, char  **argv)
     ft_bzero(env, sizeof(t_env));
     ft_bzero(&pars, sizeof(t_pars));
     pars_map(argv[1], env, &pars);
-    fill_qtree(env, &pars);
-    print_map(env, &pars);
+    fill_qtree(env, &pars);//TODO free map
+  //  env->qtree = qtree_lvl_up(env->qtree);
+   // print_map(env, &pars);
+    qtree2 = get_next_gen(env->qtree, env);
+    free_qtree(env->qtree);
+    free_qtree(qtree2);
 	return (0);
 }
