@@ -29,10 +29,9 @@ void        print_qtree(t_qtree *qtree)
     int max = (int)pow(2, qtree->level);
     t_pars  pars;
 
-    tab = (char**)ft_memalloc(sizeof(char*) * max);
+    pars.map = (char**)ft_memalloc(sizeof(char*) * max);
     while (i < max)
-        tab[i++] = (char*)ft_memalloc(sizeof(char) * max);
-    pars.map = tab;
+        pars.map[i++] = (char*)ft_memalloc(sizeof(char) * max);
    r_print(qtree, 0, max, 0, max, &pars);
     i = 0;
     int j = 0;

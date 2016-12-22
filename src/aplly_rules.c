@@ -14,7 +14,7 @@ static int      count_hit_nw(t_qtree *qtree)
     hit += qtree->ne->nw->leaf;
     hit += qtree->ne->sw->leaf;
     hit += qtree->sw->nw->leaf;
-    hit += qtree->sw->se->leaf;
+    hit += qtree->sw->ne->leaf;//<<< se
     hit += qtree->se->nw->leaf;
     return (hit);
 }
@@ -27,7 +27,7 @@ static int      count_hit_ne(t_qtree *qtree)
     hit += qtree->ne->nw->leaf;
     hit += qtree->ne->ne->leaf;
     hit += qtree->ne->se->leaf;
-    hit += qtree->sw->se->leaf;
+    hit += qtree->sw->ne->leaf;//<<< se
     hit += qtree->se->nw->leaf;
     hit += qtree->se->ne->leaf;
     return (hit);
@@ -82,7 +82,7 @@ t_qtree      *apply_rules(t_qtree *node, t_env *env)
     if ((node->sw->ne->leaf == 0 && ft_strchr(env->b, count_hit_sw(node) + 48)) || (node->sw->ne->leaf == 1 && ft_strchr(env->s, count_hit_sw(node) + 48)))
         qret->sw->leaf = 1;
     if ((node->se->nw->leaf == 0 && ft_strchr(env->b, count_hit_se(node) + 48)) || (node->se->nw->leaf == 1 && ft_strchr(env->s, count_hit_se(node) + 48)))
-        qret->nw->leaf = 1;
+        qret->se->leaf = 1;
     qret->level = 1;
     return (qret); //TODO hash now? !
 }

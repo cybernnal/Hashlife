@@ -54,9 +54,9 @@ typedef struct      		s_tab
     struct s_tab   			*next;
 }                   		t_tab;
 */
-
-typedef float 				t_hlife;
-typedef bool               t_leaf;
+typedef long long int       t_hash;
+typedef long long int 		t_hlife;
+typedef bool                t_leaf;
 
 typedef struct 				s_qtree
 {
@@ -80,6 +80,7 @@ typedef struct              s_pars
 
 typedef struct				s_env
 {
+	t_hlife 				i;
 	t_hlife 				x_max;
     t_hlife 				y_max;
     char                    b[10];
@@ -89,11 +90,12 @@ typedef struct				s_env
 
 typedef struct              s_table
 {
-    void                    *hash;
+    t_hash                  hash;
     t_qtree                 *pointer;
     struct s_table          *next;
 }                           t_table;
 
+t_qtree                     *hash_table(t_qtree *q1, t_qtree *q2, t_qtree *q3, t_qtree *q4, t_qtree *node);
 void        				print_qtree(t_qtree *qtree);
 t_qtree                     *get_next_gen(t_qtree *qtree, t_env *env);
 t_qtree                     *apply_rules(t_qtree *node, t_env *env); // aplly rule on leaf

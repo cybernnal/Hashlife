@@ -51,11 +51,15 @@ t_qtree             *get_next_gen(t_qtree *qtree, t_env *env)
     t_qtree     *qtmp3;
     t_qtree     *qtmp4;
 
-    if (qtree->next)
-        return (qtree->next);
-    if (qtree->level == 2)
-        return ((qtree->next = apply_rules(qtree, env)));//TODO hash here or in aplyy rules func
 
+    if (qtree->next)
+        return (qtree->next);//TODO error on next!
+    env->i++;
+    if (qtree->level == 2)
+    {
+        qtree->next = apply_rules(qtree, env);
+        return (hash_table(qtree->next->nw, qtree->next->ne, qtree->next->sw, qtree->next->se, qtree->next));//TODO hash here or in aplyy rules func
+    }
     n00 = get_next_gen(qtree->nw, env);
     n01 = r_on_horizon(qtree->nw, qtree->ne, env);//TODO skip one level (2)>> ?? fixed??
     n02 = get_next_gen(qtree->ne, env);
@@ -70,10 +74,11 @@ t_qtree             *get_next_gen(t_qtree *qtree, t_env *env)
     qtmp2 = get_next_gen(new_node(n01, n02, n11, n12), env);
     qtmp3 = get_next_gen(new_node(n10, n11, n20, n21), env);
     qtmp4 = get_next_gen(new_node(n11, n12, n21, n22), env);
-/*
-    qtmp1 = new_node(n00, n01, n10, n11);
-    qtmp2 = new_node(n01, n02, n11, n12);
-    qtmp3 = new_node(n10, n11, n20, n21);
-    qtmp4 = new_node(n11, n12, n21, n22);*/
-    return ((qtree->next = new_node(qtmp1, qtmp2, qtmp3, qtmp4)));
+
+//    qtmp1 = new_node(n00->se, n01->sw, n10->ne, n11->nw);
+//    qtmp2 = new_node(n01->se, n02->sw, n11->ne, n12->nw);
+//    qtmp3 = new_node(n10->se, n11->sw, n20->ne, n21->nw);
+//    qtmp4 = new_node(n11->se, n12->sw, n21->ne, n22->nw);
+    qtree->next = new_node(qtmp1, qtmp2, qtmp3, qtmp4);
+    return (hash_table(qtree->next->nw, qtree->next->ne, qtree->next->sw, qtree->next->se, qtree->next));
 }
