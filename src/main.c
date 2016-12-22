@@ -43,6 +43,7 @@ int		main(int argc, char  **argv)
     print_qtree(env->qtree);
     ft_putendl("\n");
     qtree2 = get_next_gen(env->qtree, env);
+   // print_qtree(qtree2);
     print_qtree(qtree2);
 //    ft_putendl("\n");
 //    qtree2 = qtree_lvl_up(qtree2);

@@ -57,8 +57,8 @@ static t_qtree    *fill_r(t_env *env, t_pars *pars, t_hlife x_zero, t_hlife x_ma
             qtree->se->leaf = 1;*/
         // TODO check if it's good ^ ^ ^ ^ ^ ^ ^ ^ ^
         // TODO leaf: hash if hash exist link pointer else store // hash : combin  all 4 t_leaf* (pointer) apply mod
-        // TODO remove pointer on leaf or hash it and store leaf as 0 : 1 and all pointer on only 2 boolean?
-        return (hash_table(qtree->nw, qtree->ne, qtree->sw, qtree->se, qtree));
+        // TODO remove pointer on leaf or hash it and store leaf as 0 : 1 and all pointer on only 2 boolean? // << yes
+        return (hash_table(qtree->nw, qtree->ne, qtree->sw, qtree->se, qtree));//TODO hash 3 pointer + pointer to 0 or 1
     }
 
     qtree->nw = fill_r(env, pars, x_zero, x_zero + ((x_max - x_zero) / 2), y_zero, y_zero + ((y_max - y_zero) / 2), level - 1); //TODO x/y is good?

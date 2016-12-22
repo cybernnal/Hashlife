@@ -23,7 +23,7 @@ static t_qtree         *init_r_qempty(t_hlife level)
 
 static t_qtree         *get_empty_node(t_hlife level)
 {
-     t_qtree      *qempty = NULL;
+     t_qtree      *qempty = NULL;// TODO non static refait a chaque fois pas bon !!!!!!!!!!!!!!!
     static t_hlife      exlvl;
 
     if (!qempty && (exlvl = level))
@@ -87,10 +87,10 @@ t_qtree     *qtree_lvl_up(t_qtree *qtree)
     qret->ne->sw = qtree->ne;
     qret->sw->ne = qtree->sw;
     qret->se->nw = qtree->se;
-    qret->nw->level = qtree->level - 1;
-    qret->sw->level = qtree->level - 1;
-    qret->ne->level = qtree->level - 1;
-    qret->se->level = qtree->level - 1;
+    qret->nw->level = qtree->level;
+    qret->sw->level = qtree->level;
+    qret->ne->level = qtree->level;
+    qret->se->level = qtree->level;
     //TODO hash all quadrant: the 4 subnode + current new node
     return (hash_table(qret->nw, qret->ne, qret->sw, qret->se, qret));
 }

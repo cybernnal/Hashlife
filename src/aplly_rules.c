@@ -84,5 +84,6 @@ t_qtree      *apply_rules(t_qtree *node, t_env *env)
     if ((node->se->nw->leaf == 0 && ft_strchr(env->b, count_hit_se(node) + 48)) || (node->se->nw->leaf == 1 && ft_strchr(env->s, count_hit_se(node) + 48)))
         qret->se->leaf = 1;
     qret->level = 1;
-    return (qret); //TODO hash now? !
+    node->next = qret;
+    return (hash_table(qret->nw, qret->ne, qret->sw, qret->se, qret));//TODO hash now? ! // << yes // ^^^ hash leaf
 }
