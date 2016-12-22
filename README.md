@@ -4,7 +4,7 @@ starting hashlife algorithm implementation
 # **USAGE:**
 ` cmake . ;  make ; ./hlife 'map_path.rle`
 
-if someone can and whant help me please contact me to: tbillard@student.42.fr, object: hashlife,
+if someone can and whant to help me please contact me to: tbillard@student.42.fr, object: hashlife,
 I may have questions
 
 ## TODO-list:
